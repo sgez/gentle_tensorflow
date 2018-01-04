@@ -31,7 +31,7 @@ sess = tf.Session()
 merged = tf.summary.merge_all()
 writer = tf.summary.FileWriter("/tmp/mnist_sgd_logs_20160404", sess.graph_def)
 
-init = tf.initialize_all_variables()
+init = tf.global_variables_initializer()
 sess.run(init)
 
 steps = 1000
